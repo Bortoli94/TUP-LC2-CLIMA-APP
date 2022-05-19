@@ -12,10 +12,11 @@ section form{
     align-items: stretch;
 }
 
-/*CENTRADO DE BOTONES*/
+/*CENTRADO Y SEPARACIÓN DE BOTONES*/
 .botones{
     display: flex;
     justify-content: center;
+    gap: 5px;
 }
 
 /*ESTILADOS DE FORMULARIOS*/
@@ -27,10 +28,6 @@ input, textarea{
 
 label, div{
     margin-top: 10px;
-}
-
-button{
-    margin-right: 5px;
 }
 
 /*ESTILADO CARTEL DE ERROR EMAIL*/
