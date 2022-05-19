@@ -4,21 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>TUP LC2 - TP Integrador</title>
-    <link rel="icon" type="image/png" href="./img/icons8-día-parcialmente-nublado-96.png" />
+    <link rel="icon" type="image/png" href="./img/Icono.png" />
+    
     <!-- Estilos CSS -->
-    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/pages/index.css">
 </head>
 
 <body>
     <header>
         <h1>
-            <img src="./img/icons8-día-parcialmente-nublado-96.png" alt="LogoAplicacion">
+            <img src="./img/Icono.png" alt="LogoAplicacion">
             <span>Clima App</span>
         </h1>
         <nav>
             <ul>
-                <li class="current-page"><a href="#">Mi App</a></li>
+                <li class="current-page"><a href="#">Clima</a></li>
                 <li><a href="./add-city.html">Agregar Ciudad</a></li>
                 <li><a href="./help.html">Ayuda</a></li>
             </ul>
@@ -28,20 +31,21 @@
     <!-- Contenido principal de la página -->
     <main>
         <h2>El Clima Ahora</h2>
+
+        <!-- Sección donde se debe colocar el formulario, con el select y el botón de consultar -->
         <section id="form-city-list">
-            <!-- Sección donde se debe colocar el formulario, con el select y el botón de consultar -->
             <form action="">
-                <select name="SeleccionCiudad" id="SeleccionarCiudad">
+                <select name="SelectCity" id="SelectCity">
                     <option value="" disabled selected>Seleccionar Ciudad</option>
                     <option value="Rosario">Rosario</option>
                     <option value="Rafaela">Rafaela</option>
                 </select>
-                <input type="submit" value="Consultar">
+                <button type="submit">Consultar</button>
             </form>
         </section>
 
+        <!-- Sección donde se debe mostrar el clima de la ciudad -->
         <section id="section-weather-result">
-            <!-- Sección donde se debe mostrar el clima de la ciudad -->
             <div class="card">
                 <h3>Rosario</h3>
                 <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="Estado del tiempo" title="Estado del tiempo">

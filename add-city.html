@@ -4,22 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>TUP LC2 - TP Integrador</title>
-    <link rel="icon" type="image/png" href="./img/icons8-día-parcialmente-nublado-96.png" />
+    <link rel="icon" type="image/png" href="./img/Icono.png" />
+    
     <!-- Estilos CSS -->
-    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/pages/add-city.css">
+
 </head>
 
 <body>
     <header>
         <h1>
-            <img src="./img/icons8-día-parcialmente-nublado-96.png" alt="LogoAplicacion">
+            <img src="./img/Icono.png" alt="LogoAplicacion">
             <span>Clima App</span>
         </h1>
         
         <nav>
             <ul>
-                <li><a href="./index.html">Mi App</a></li>
+                <li><a href="./index.html">Clima</a></li>
                 <li class="current-page"><a href="#">Agregar Ciudad</a></li>
                 <li><a href="./help.html">Ayuda</a></li>
             </ul>
@@ -34,10 +38,18 @@
                 <label for="AgregarCiudad">Ingrese la ciudad a agregar:</label>
                 <input type="text" name="AgregarCiudad" id="AgregarCiudad">
                 <br>
-                <input type="submit" value="Agregar">
+                <button type="Submit">Agregar</button>
             </form>
         </section>
+
+        <!-- Sección donde se muestra el mensaje de status sobre la carga de ciudad-->
+        <section id="sectionStatus">
+            <div class="status succes">Ciudad agregada con éxito</div>
+            <div class="status error">Error: La ciudad ingresada no se encuentra en la API o se produjo un error al consultar</div>
+            <div class="status warning">La ciudad ya se encuentra almacenada</div>
+        </section>
     </main>
+
 
     <footer>
         <p>

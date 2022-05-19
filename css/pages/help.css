@@ -1,0 +1,50 @@
+/*CENTRADO ELEMENTOS MAIN*/
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*CENTRADO ELEMENTOS DEL FORMULARIO*/
+section form{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+/*CENTRADO DE BOTONES*/
+.botones{
+    display: flex;
+    justify-content: center;
+}
+
+/*ESTILADOS DE FORMULARIOS*/
+input, textarea{
+    width: 300px;
+    padding: 7px;
+    border-radius: 3px;
+}
+
+label, div{
+    margin-top: 10px;
+}
+
+button{
+    margin-right: 5px;
+}
+
+/*ESTILADO CARTEL DE ERROR EMAIL*/
+#EmailError{
+    width: 350px;
+    margin-top: 50px;
+    padding: 15px 10px;
+    background-color: var(--color-error);
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    border-radius: 15px;
+}
+
+#bold{
+    font-weight: bold;
+}

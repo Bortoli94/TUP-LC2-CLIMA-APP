@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
 }
 
 :root {
@@ -11,8 +10,10 @@
     --color-theme: #00594c;
     --color-active: #5df2d6;
     --color-back-active: #04957d;
-    --color-gradient: linear-gradient(to right, var(--color-theme),
-    var(--color-back-active));
+    --color-gradient: linear-gradient(to right, var(--color-theme), var(--color-back-active));
+    --color-success: #28a745;
+    --color-warning: #ffc107;
+    --color-error: #dc3545;
 }
 
 body {
@@ -36,7 +37,10 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    background: var(--color-theme);
+    background: var(--color-gradient);
+    border-bottom: 3px solid var(--color-active);
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 
 nav>ul {
@@ -63,6 +67,8 @@ nav li.current-page a {
     color: var(--color-theme);
     background-color: var(--color-active);
     pointer-events: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 main {
@@ -103,11 +109,12 @@ main section {
 footer {
     position: fixed;
     bottom: 0px;
-    background: var(--color-theme);
+    background: var(--color-gradient);
     width: 100%;
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
+    border-top: 3px solid var(--color-active);
 }
 
 footer p {
@@ -131,3 +138,16 @@ main p {
         padding-bottom: 20px;
     }
 }
+
+/*BOTONES COMUNES A TODAS LAS PÁGINAS*/
+form button{
+    background-color: var(--color-theme);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;   /*El cursor se convierte en una manito*/
+}
+
