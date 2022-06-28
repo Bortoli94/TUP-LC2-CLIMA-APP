@@ -11,6 +11,9 @@
     <!-- Estilos CSS -->
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/pages/add-city.css">
+    <!-- JavaScrip-->
+    <script src="./js/common.js"></script>
+    <script src="./js/pages/add-city.js" defer></script>
 
 </head>
 
@@ -35,22 +38,17 @@
         <h2>Agregar Ciudad</h2>
         <section>
             <form action="">
-                <label for="AgregarCiudad">Ingrese la ciudad a agregar:</label>
-                <input type="text" name="AgregarCiudad" id="AgregarCiudad">
+                <label for="addCity">Ingrese la ciudad a agregar:</label>
+                <input type="text" name="addCity" id="addCity">
                 <br>
-                <button type="Submit">Agregar</button>
+                <button type="button" id="submitCity" onclick="addNewCityToLocalStorage()">Agregar</button>
             </form>
         </section>
-
+    
         <!-- Sección donde se muestra el mensaje de status sobre la carga de ciudad-->
         <section id="sectionStatus">
-            <div class="status succes">Ciudad agregada con éxito</div>
-            <div class="status error">Error: La ciudad ingresada no se encuentra en la API o se produjo un error al consultar</div>
-            <div class="status warning">La ciudad ya se encuentra almacenada</div>
         </section>
     </main>
-
-
     <footer>
         <p>
             Desarrollado con ♥ - LC2

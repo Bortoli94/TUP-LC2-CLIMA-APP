@@ -151,3 +151,22 @@ form button{
     cursor: pointer;   /*El cursor se convierte en una manito*/
 }
 
+/*CARTELES ESTADOS "CARGADO", "ALERTA", "ERROR"*/
+.status{
+    width: 350px;
+    padding: 15px 10px;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    border-radius: 15px;
+}
+
+.succes{
+    background-color: var(--color-success);
+}
+.error{
+    background-color: var(--color-error);
+}
+.warning {
+    background-color: var(--color-warning);
+}
