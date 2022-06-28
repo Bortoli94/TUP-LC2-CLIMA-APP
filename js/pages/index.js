@@ -5,7 +5,7 @@ function addCitiesToSelector() {
     let cities = getCitiesFromLocalStorage();
 
     if (cities.length == 0) {
-        selectCity.innerHTML += `<option value="" disabled selected>Debe primero cargar ciudades</option>`
+        selectCity.innerHTML += `<option value="" disabled selected>Debe cargar ciudades</option>`
     }
     else {
         selectCity.innerHTML += `<option value="" disabled selected>Seleccionar Ciudad</option>`

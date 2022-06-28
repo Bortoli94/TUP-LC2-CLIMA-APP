@@ -1,4 +1,4 @@
-const keyApi = "22718e9bd829f98423a40d7a5b44fa3d";
+const keyApi = "22718e9bd829f98423a40d7a5b44fa3d"; //Clave obtenida de la webAPI
 const sectionCard = document.getElementById("section-weather-result"); //seccion donde se muestra la card
 
 function getCitiesFromLocalStorage() {
