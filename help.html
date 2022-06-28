@@ -11,6 +11,10 @@
     <!-- Estilos CSS -->
     <link rel="stylesheet" href="/css/common.css">
     <link rel="stylesheet" href="/css/pages/help.css">
+     <!-- JavaScrip-->
+     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" defer></script>
+     <script src="/js/common.js" defer></script>
+     <script src="/js/pages/help.js" defer></script>
 </head>
 
 <body>
@@ -41,23 +45,25 @@
         </p>
         
         <section>
-            <form action="">
+            <form action="" id="contact-form">
                 <label for="name">Nombre:</label>
                 <input type="text" name="name" id="name" >
             
                 <label for="email">Email:</label>
-                <input type="email" name="email" id="email">
+                <input type="text" name="email" id="email">
             
                 <label for="messaje">Mensaje:</label>
                 <textarea name="messaje" id="messaje" cols="30" rows="10"></textarea>
                 <div class="botones">
                     <button type="reset">Limpiar</button>
-                    <button type="button">Enviar</button>
+                    <button type="submit">Enviar</button>
                 </div>
             </form>
         </section>
+        <section id="statusEmail">
 
-        <div class="status error">Ingrese un <span id="bold">Email</span> válido</div>
+        </section>
+
     </main>
     
     <footer>

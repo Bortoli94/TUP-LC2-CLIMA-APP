@@ -45,8 +45,6 @@ function loadCard(data) {
                     <p>Presión: ${pressure} P</p>
                 </div>`
 
-    
-    
     if (sectionCard) {
         sectionCard.innerHTML = loader;
         setTimeout(function() {sectionCard.innerHTML = "";
