@@ -2,7 +2,6 @@
 const addCity = document.getElementById("addCity"); //Input donde se ingresa la ciudad
 const sectionStatus = document.getElementById("sectionStatus"); //Seccion donde se muestra los carteles de estatus
 const submitCityButton = document.getElementById("submitCity"); //Boton para agregar ciudad
-const removeStatus = document.getElementsByClassName("status"); //Clase del cartel de estatus
 //*************************************************************
 
 //************************ CARTELES  STATUS ****************************************************************************************
