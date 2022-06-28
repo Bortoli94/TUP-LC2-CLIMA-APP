@@ -15,21 +15,22 @@ const warning = '<p class="status warning">La ciudad ingresada ya se encuentra a
 let cities = getCitiesFromLocalStorage();
 
 async function addNewCityToLocalStorage() {
-    let newCity = addCity.value.toUpperCase();  
-    
+    let newCity = addCity.value.toUpperCase();
+    sectionStatus.innerHTML = loader;  
     switch(await validateCity(newCity)) {
         case "success":
             cities.push(newCity);
             localStorage.setItem("CITIES", JSON.stringify(cities));
-            sectionStatus.innerHTML = success;
+            poster = success;
             break;
         case "warning":
-            sectionStatus.innerHTML = warning;
+            poster = warning;
             break;
         case "error":
-            sectionStatus.innerHTML = error;        
+            poster = error;
             break;
     };
+    setTimeout(function() {sectionStatus.innerHTML = poster;},1500);
     setTimeout(function() {removeStatus[0].remove();},4000);
 };
 

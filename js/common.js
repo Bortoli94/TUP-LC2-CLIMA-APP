@@ -1,4 +1,5 @@
 const keyApi = "22718e9bd829f98423a40d7a5b44fa3d"; //Clave obtenida de la webAPI
+const loader = '<div class="loader-animation"><div></div><div></div><div></div></div>'; //loader
 const sectionCard = document.getElementById("section-weather-result"); //seccion donde se muestra la card
 
 function getCitiesFromLocalStorage() {
@@ -44,8 +45,11 @@ function loadCard(data) {
                     <p>Presión: ${pressure} P</p>
                 </div>`
 
+    
+    
     if (sectionCard) {
-        sectionCard.innerHTML = "";
-        sectionCard.innerHTML += card;
+        sectionCard.innerHTML = loader;
+        setTimeout(function() {sectionCard.innerHTML = "";
+        sectionCard.innerHTML += card;},1500);
     }
 }
