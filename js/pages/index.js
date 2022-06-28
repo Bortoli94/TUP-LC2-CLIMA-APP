@@ -1,9 +1,10 @@
+//************************ ELEMENTOS DOM ****************
 const selectCity = document.getElementById("SelectCity"); //selector de ciudades
-const consultButton = document.getElementById("consult"); //boton de consulta
+const consultButton = document.getElementById("consult"); //boton de consulta clima
+//*******************************************************
 
-function addCitiesToSelector() {
+function addCity() {
     let cities = getCitiesFromLocalStorage();
-
     if (cities.length == 0) {
         selectCity.innerHTML += `<option value="" disabled selected>Debe cargar ciudades</option>`
     }
@@ -19,5 +20,5 @@ consultButton.onclick = function (){
     consultAPI(selectCity.value);
 }
 
-addCitiesToSelector();
+addCity();
 
