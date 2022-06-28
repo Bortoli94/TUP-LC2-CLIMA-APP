@@ -3,14 +3,13 @@ const sectionStatus = document.getElementById("sectionStatus"); //Seccion donde 
 const submitCityButton = document.getElementById("submitCity"); //Boton para agregar ciudad
 
 //************************CARTELES  STATUS******************************************
-const success = '<p class="status succes">Ciudad agregada con éxito</p>';
+const success = '<p class="status success">Ciudad agregada con éxito</p>';
 const error = '<p class="status error">Error: La ciudad ingresada no se encuenta en la API o se produjo un error al consultar</p>';
 const warning = '<p class="status warning">La ciudad ingresada ya se encuentra almacenada</p>';
 //**********************************************************************************
 let cities = getCitiesFromLocalStorage();
 
 async function addNewCityToLocalStorage() {
-    debugger;
     let newCity = addCity.value.toUpperCase();  
     
     switch(await validateCity(newCity)) {
@@ -52,5 +51,3 @@ function removeMessage() {
 }  
 
 submitCityButton.addEventListener("click", addNewCityToLocalStorage);
-
-

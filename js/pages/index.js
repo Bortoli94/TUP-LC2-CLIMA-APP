@@ -21,5 +21,3 @@ consultButton.onclick = function (){
 
 addCitiesToSelector();
 
-
-

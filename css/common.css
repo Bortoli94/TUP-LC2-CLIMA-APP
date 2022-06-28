@@ -161,7 +161,7 @@ form button{
     border-radius: 15px;
 }
 
-.succes{
+.success{
     background-color: var(--color-success);
 }
 .error{
