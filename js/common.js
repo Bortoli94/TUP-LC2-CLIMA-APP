@@ -1,5 +1,5 @@
-const keyApi = "22718e9bd829f98423a40d7a5b44fa3d"
-const sectionCard = document.getElementById("section-weather-result");
+const keyApi = "22718e9bd829f98423a40d7a5b44fa3d";
+const sectionCard = document.getElementById("section-weather-result"); //seccion donde se muestra la card
 
 function getCitiesFromLocalStorage() {
     let cities = localStorage.getItem("CITIES");
@@ -34,7 +34,6 @@ function loadCard(data) {
     let humidity = data.main.humidity;
     let wind = data.wind.speed;
     let pressure = data.main.pressure;
-
     let card = `<div class="card">
                     <h3>${city}</h3>
                     <img src="http://openweathermap.org/img/wn/${icon}.png" alt="Estado del tiempo" title="Estado del tiempo">

@@ -1,6 +1,7 @@
 const addCity = document.getElementById("addCity"); //Input donde se ingresa la ciudad
 const sectionStatus = document.getElementById("sectionStatus"); //Seccion donde se muestra los carteles de estatus
 const submitCityButton = document.getElementById("submitCity"); //Boton para agregar ciudad
+const removeStatus = document.getElementsByClassName("status"); //Clase del cartel de estatus
 
 //************************CARTELES  STATUS******************************************
 const success = '<p class="status success">Ciudad agregada con éxito</p>';
@@ -22,11 +23,10 @@ async function addNewCityToLocalStorage() {
             sectionStatus.innerHTML = warning;
             break;
         case "error":
-            sectionStatus.innerHTML = error;
-            
+            sectionStatus.innerHTML = error;        
             break;
     };
-    removeMessage();
+    setTimeout(function() {removeStatus[0].remove();},3000);
 };
 
 async function validateCity(newCity) {
@@ -43,11 +43,5 @@ async function validateCity(newCity) {
         return "success";
     };
 }
-
-function removeMessage() {
-    setTimeout(function() {
-        document.getElementsByClassName("status")[0].remove();
-    }, 3000);
-}  
 
 submitCityButton.addEventListener("click", addNewCityToLocalStorage);
