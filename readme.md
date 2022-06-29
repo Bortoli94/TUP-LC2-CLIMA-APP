@@ -35,8 +35,25 @@
     color que agregué en las variables de comon.css.
 
 
-    Quedo atento a sugerencias, correcciones y cualquier otro tip que pueda alimentar mi aprendizaje. 
+## ESTAPA 3 - JavaScrip
+
+    En esta estapa se corrigió los errores de la etapa anterior en base a la repetición de código
+    Además se agrego funcionalidad JavaScrip para darle vida a la página
+
+    Algunos acotes sobre como se resolvió esta etapa:
+
+    -comon.js: Se declararon algunas variables globales comunes a todas las paginas, se construyo la funcion
+     que hace la consulta a la API y tambien se construyó la tarjeta donde se exiben los datos obtenidos de la API.
+
+    -index.js: Se utilizo para realizar la carga de ciudades al selector y hacer la llamada a la API para
+    construir la tarjeta donde se exiben los datos.
+
+    -add-city.js: Utilizado para validar las ciudades y cargarlas al localStorage
+
+    -help.js: Aquí se utilizó una API de emailJS para hacer envios de email de consultas que lleguen directamente
+    a mi casilla de correo personal
+
+
+
+Quedo atento a sugerencias, correcciones y cualquier otro tip que pueda alimentar mi aprendizaje. 
     Saludos, Bortoli Gaston 
-
-
-    
