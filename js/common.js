@@ -1,6 +1,8 @@
 const keyApi = "22718e9bd829f98423a40d7a5b44fa3d"; //Clave obtenida de la webAPI
 const loader = '<div class="loader-animation"><div></div><div></div><div></div></div>'; //loader
+
 const sectionCard = document.getElementById("section-weather-result"); //seccion donde se muestra la card
+
 const removeStatus = document.getElementsByClassName("status") //seleccion carteles status para su posterior eliminacion
 
 function getCitiesFromLocalStorage() {
@@ -17,8 +19,8 @@ function getCitiesFromLocalStorage() {
 function consultAPI(city) {
     return fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${keyApi}&units=metric&lang=es`)
         .then(response => {
-            if (response.ok) return response.json();
-            throw new Error("error")
+            if (response.ok) 
+            return response.json();
         })
         .then(data => {
             loadCard(data);

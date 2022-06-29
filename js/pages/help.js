@@ -13,14 +13,16 @@ const errorEmailApi = '<div class="status error">Algo fallo en el envío, por fa
 //**************************ELEMENTOS DOM*************************************************************
 const statusEmail = document.getElementById("statusEmail"); //seccion donde se publica el status del Email
 const emailValue = document.getElementById("email"); //Input email
-const removeStatusMail = document.getElementsByClassName("status");
+const form = document.getElementById("contact-form"); //formulario
 //****************************************************************************************************
 
 emailjs.init(publicKey);
 
 window.onload = function() {
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
+    form.addEventListener('submit', function(event) {
+        
         statusEmail.innerHTML = loader;                
+        
         if (validateEmail(emailValue.value)) {
             event.preventDefault();
             emailjs.sendForm(contactService, contactForm, this)
@@ -32,9 +34,9 @@ window.onload = function() {
         }else{
             setTimeout(function() {statusEmail.innerHTML = errorEmail;},1500);
         }
-        setTimeout(function() {removeStatusMail[0].remove();},10000);  
-    });
-}
+        setTimeout(function() {removeStatus[0].remove();},10000);  
+    });}
+    
 
 function validateEmail(email) {
     var re = /\S+@\S+\.\S+/;
