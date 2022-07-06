@@ -17,7 +17,7 @@ function getCitiesFromLocalStorage() {
 }
 
 function consultAPI(city) {
-    return fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${keyApi}&units=metric&lang=es`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${keyApi}&units=metric&lang=es`)
         .then(response => {
             if (response.ok) 
             return response.json();
@@ -26,7 +26,8 @@ function consultAPI(city) {
             loadCard(data);
         })
         .catch(error => {
-            return "error"
+            debugger;
+            return false
         });
 }
 
@@ -49,7 +50,6 @@ function loadCard(data) {
                 </div>`
 
     if (sectionCard) {
-        sectionCard.innerHTML = loader;
         setTimeout(function() {sectionCard.innerHTML = "";
         sectionCard.innerHTML += card;},1500);
     }

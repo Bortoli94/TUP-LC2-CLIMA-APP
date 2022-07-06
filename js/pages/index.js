@@ -17,6 +17,7 @@ function addCity() {
 }
 
 consultButton.onclick = function (){
+    sectionCard.innerHTML = loader;
     consultAPI(selectCity.value);
 }
 
