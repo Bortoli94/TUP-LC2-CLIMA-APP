@@ -1,7 +1,5 @@
 const keyApi = "22718e9bd829f98423a40d7a5b44fa3d"; //Clave obtenida de la webAPI
 const loader = '<div class="loader-animation"><div></div><div></div><div></div></div>'; //loader
-const removeStatus = document.getElementsByClassName("status") //seleccion carteles status para su posterior eliminacion
-
 
 
 function getCitiesFromLocalStorage() {
@@ -32,7 +30,7 @@ function consultAPI(city, flag=false) {
     .catch(err => {
         return false
     })
-    
+
     return send;
 }
 

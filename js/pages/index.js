@@ -17,7 +17,6 @@ function addCity() {
     }
 }
 
-
 consultButton.onclick = async function () {
 
     sectionCard.innerHTML= loader;
