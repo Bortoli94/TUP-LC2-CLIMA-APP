@@ -42,11 +42,11 @@
 
     Algunos acotes sobre como se resolvió esta etapa:
 
-    -comon.js: Se declararon algunas variables globales comunes a todas las paginas, se construyo la funcion
-     que hace la consulta a la API y tambien se construyó la tarjeta donde se exiben los datos obtenidos de la API.
+    -comon.js: Se declararon algunas variables globales comunes a todas las paginas y se construyo la funcion fetch
+     que hace la consulta a la API 
 
-    -index.js: Se utilizo para realizar la carga de ciudades al selector y hacer la llamada a la API para
-    construir la tarjeta donde se exiben los datos.
+    -index.js: Se utilizo para realizar la carga de ciudades al selector y construir la tarjeta donde se mostraran 
+    los datos del clima
 
     -add-city.js: Utilizado para validar las ciudades y cargarlas al localStorage
 
