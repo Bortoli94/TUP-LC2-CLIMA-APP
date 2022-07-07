@@ -11,11 +11,12 @@ const warning = '<p class="status warning">La ciudad ingresada ya se encuentra a
 //**********************************************************************************************************************************
 
 
-let cities = getCitiesFromLocalStorage();
 
 submitCityButton.onclick = async function(){
-    let newCity = addCity.value.toUpperCase();
     sectionStatus.innerHTML = loader;  
+    
+    let cities = getCitiesFromLocalStorage();
+    let newCity = addCity.value.toUpperCase();
     
     if(cities.includes(newCity)){
         poster = warning;
