@@ -13,14 +13,14 @@ const warning = '<p class="status warning">La ciudad ingresada ya se encuentra a
 
 let cities = getCitiesFromLocalStorage();
 
-submitCityButton.onclick = function(){
+submitCityButton.onclick = async function(){
     let newCity = addCity.value.toUpperCase();
     sectionStatus.innerHTML = loader;  
     
     if(cities.includes(newCity)){
         poster = warning;
     }else{
-        if (! consultAPI(newCity)) {
+        if (await consultAPI(newCity)) {
             cities.push(newCity);
             localStorage.setItem("CITIES", JSON.stringify(cities));
             poster = success;
