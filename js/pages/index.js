@@ -6,75 +6,57 @@ const sectionCard = document.getElementById("section-weather-result"); //seccion
 
 function addCity() {
     let cities = getCitiesFromLocalStorage();
-    
+
     if (cities.length == 0) {
         selectCity.innerHTML += `<option value="" disabled selected>Debe agregar ciudad</option>`
     } else {
         selectCity.innerHTML += `<option value="" disabled selected>Seleccionar Ciudad</option>`
-        for (let i = 0; i < cities.length; i++){
-            selectCity.options.add(new Option(cities[i],cities[i]))
-        }}}
+        for (let i = 0; i < cities.length; i++) {
+            selectCity.options.add(new Option(cities[i], cities[i]))
+        }
+    }
+}
 
 
-consultButton.onclick = async function (){
-    
-    /* sectionCard.innerHTML = loader;*/
-    
+consultButton.onclick = async function () {
+
+    sectionCard.innerHTML= loader;
+
     data = await consultAPI(selectCity.value, true);
 
-    let city = data.name;
-    let icon = data.weather[0].icon;
-    let temp = data.main.temp;
-    let thermalSensation = data.main.feels_like;
-    let humidity = data.main.humidity;
-    let wind = data.wind.speed;
-    let pressure = data.main.pressure;
-    
     const card = document.createElement("div")
+
+    const nameCity = document.createElement("h3")
+    const icon = document.createElement("img")
+    const temp = document.createElement("p")
+    const thermalSensation = document.createElement("p")
+    const humidity = document.createElement("p")
+    const wind = document.createElement("p")
+    const pressure = document.createElement("p")
+
     card.setAttribute("class", "card")
-    
-    const titulo = document.createElement("h3")
-    titulo.textContent = city
-    
-    const img = document.createElement("img")
-    img.setAttribute("src",`http://openweathermap.org/img/wn/${icon}.png`)
-    
-    const temp2 = document.createElement("p")
-    temp2.textContent = `Temperatura: ${temp}°`
-    
-    const sensacionTermica = document.createElement("p")
-    sensacionTermica.textContent = `Sensación Térmica: ${thermalSensation}°`
-    
-    const humedad = document.createElement("p")
-    humedad.textContent = `Humedad: ${humidity}%`
-    
-    const viento = document.createElement("p")
-    viento.textContent = `Velocidad del Viento: ${wind}km/h`
-    
-    const presion = document.createElement("p")
-    presion.textContent = `Presión: ${pressure} P`
-    
-    card.appendChild(titulo)
-    card.appendChild(img)
-    card.appendChild(temp2)
-    card.appendChild(sensacionTermica)
-    card.appendChild(humedad)
-    card.appendChild(viento)
-    card.appendChild(presion)
+    card.setAttribute("id","eliminar")
+    icon.setAttribute("src",`http://openweathermap.org/img/wn/${data.weather[0].icon}.png`)
 
-    sectionCard.appendChild(card)
+    nameCity.textContent = data.name
+    temp.textContent = `Temperatura: ${data.main.temp}°`
+    thermalSensation.textContent = `Sensación Térmica: ${data.main.feels_like}°`
+    humidity.textContent = `Humedad: ${data.main.humidity}%`
+    wind.textContent = `Velocidad del Viento: ${data.wind.speed}km/h`
+    pressure.textContent = `Presión: ${data.main.pressure} P`
 
-    /* let card2 = `<div class="card">
-                    <h3>${city}</h3>
-                    <img src="http://openweathermap.org/img/wn/${icon}.png" alt="Estado del tiempo" title="Estado del tiempo">
-                    <p>Temperatura: ${temp}°</p>
-                    <p>Sensación Térmica: ${thermalSensation}°</p>
-                    <p>Humedad: ${humidity}%</p>
-                    <p>Velocidad del Viento: ${wind}km/h</p>
-                    <p>Presión: ${pressure} P</p>
-                </div>` */
+    card.appendChild(nameCity)
+    card.appendChild(icon)
+    card.appendChild(temp)
+    card.appendChild(thermalSensation)
+    card.appendChild(humidity)
+    card.appendChild(wind)
+    card.appendChild(pressure)
 
-    /* setTimeout(function() {sectionCard.innerHTML = card;},2000); */
+    setTimeout(function() {
+        sectionCard.innerHTML= "";
+        sectionCard.appendChild(card);
+        },1500); 
 }
 
 addCity();

@@ -32,6 +32,7 @@ function consultAPI(city, flag=false) {
     .catch(err => {
         return false
     })
+    
     return send;
 }
 
