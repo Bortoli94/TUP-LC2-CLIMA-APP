@@ -56,4 +56,4 @@
 
 
 Quedo atento a sugerencias, correcciones y cualquier otro tip que pueda alimentar mi aprendizaje. 
-    Saludos, Bortoli Gaston.asdasd
+    Saludos, Bortoli Gaston.
